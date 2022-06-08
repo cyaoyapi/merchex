@@ -6,7 +6,10 @@
 <p><a href="{% url 'band-create' %}">Ajouter un nouveau groupe</a></p>
 <ul>
     {% for band in bands %}
-    <li><a href="{% url 'band-detail' band.id %}">{{ band.name }}</a></li>
+    <li>
+        <a href="{% url 'band-detail' band.id %}">{{ band.name }}</a> 
+        [<a href="{% url 'band-update' band.id %}">Editer</a>]</li>
+        [<a href="{% url 'band-delete' band.id %}">Supprimer</a>]</li>
     {% endfor %}
 </ul>
 

@@ -2,10 +2,10 @@
 
 {% block content %}
 
-<h1>Ajouter une annonce.</h1>
+<h1>Supprimer un groupe</h1>
 <form method="post" action="" novalidate>
     {% csrf_token %}
-    {{ form.as_p }}
+    <p> Voulez-vous supprimer le groupe {{ band.name }} [ID : {{ band.id }}] ? </p>
     <input type="submit" value="Envoyer" />
 </form>    
  

@@ -20,8 +20,14 @@ import listings.views as listings_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('hello/', listings_views.hello, name='hello'),
+    path('bands/', listings_views.band_list, name='band-list'),
+    path('bands/<int:band_id>/', listings_views.band_detail, name='band-detail'),
+    path('listings/', listings_views.listing_list, name='listing-list'),
+    path('listings/<int:listing_id>/', listings_views.listing_detail, name='listing-detail'),
     path('about-us/', listings_views.about, name='about'),
-    path('listings/', listings_views.listings, name='listings'),
     path('contact-us/', listings_views.contact, name='contact'),
 ]
+
+# Customised errors pages
+
+handler500 = 'listings.views.handler500'

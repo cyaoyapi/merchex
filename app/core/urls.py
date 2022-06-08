@@ -22,10 +22,13 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('bands/', listings_views.band_list, name='band-list'),
     path('bands/<int:band_id>/', listings_views.band_detail, name='band-detail'),
+    path('bands/add/', listings_views.band_create, name='band-create'),
     path('listings/', listings_views.listing_list, name='listing-list'),
     path('listings/<int:listing_id>/', listings_views.listing_detail, name='listing-detail'),
+    path('listings/add/', listings_views.listing_create, name='listing-create'),
     path('about-us/', listings_views.about, name='about'),
     path('contact-us/', listings_views.contact, name='contact'),
+    path('sent-message/', listings_views.sent_message, name='sent-message'),
 ]
 
 # Customised errors pages
